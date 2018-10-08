@@ -1,0 +1,26 @@
+<h1>HomePages#index</h1>
+<p>Find me in app/views/home_pages/index.html.erb</p>
+<table>
+	<tr>
+		<th>NAME</th>
+		<th>EMP_N0</th>
+		<th>MOBILE_NO</th>
+		<th>EMAIL_ID</th>
+		<th>DOB</th>
+		<th>ADDRESS</th>
+
+	</tr>
+<% @lec.each do |f|%>
+	<tr><td><%= f.name %></td>
+	<td><%= f.emp_no %></td>
+	<td><%= f.mobile_no %></td>
+	<td><%= f.email_id %></td>
+	<td><%= f.dob %></td>
+	<td><%= f.address %></td>
+	<td><%= link_to 'edit',edit_home_page_url(id: f.id) %></td>
+	<td><%= link_to 'show',home_page_url(id: f.id) %></td>
+	<td><%= link_to 'delete',home_page_url(id: f.id), :method =>:delete%></td>
+	</tr>
+<%end%>
+<%= link_to 'new', new_home_page_url%>
+
