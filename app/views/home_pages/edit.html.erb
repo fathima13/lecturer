@@ -1,5 +1,5 @@
 <h1>HomePages#edit</h1>
-<%= form_for @lec,url: home_page_url do |f|%>
+<%= form_for @lec, url: home_page_url, method: :put do |f|%>
 <p><%=f.label :name %><%=f.text_field :name%></p>
 <p><%=f.label :emp_no %><%=f.text_field :emp_no%></p>
 <p><%=f.label :mobile_no %><%=f.text_field :mobile_no%></p>
